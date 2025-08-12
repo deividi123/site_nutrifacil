@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Sitemap: https://nutrideividi.com.br/sitemap.xml
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
+
+# Allow Google Images to crawl images
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# Allow Googlebot to crawl JavaScript and CSS
+User-agent: Googlebot
+Allow: *.js
+Allow: *.css
