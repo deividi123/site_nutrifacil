@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NutriFácil – Calculadora de Dietas Profissional</title>
+  <meta name="description" content="Monte dietas profissionais em menos de 5 minutos com nossa planilha de dietas para Nutricionistas e estudantes de Nutrição." />
+  <meta name="keywords" content="montar dieta rápido, planilha para montar dieta, planilha de montar dieta, planilha para nutricionistas, planilha de dieta para nutricionista, planilha para nutricionista, planilha de dieta, planilha de dietas, calculadora de dietas, calculadora de dieta, consultoria nutricional, dieta profissional" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -11,240 +17,1164 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NZM24F75');</script>
 <!-- End Google Tag Manager -->
 
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planilha de Dieta para Nutricionista | Calculadora Nutrifácil Excel</title>
-    
-    <!-- Meta tags principais -->
-    <meta name="description" content="Planilha de dieta moderna para nutricionistas. Monte dietas profissionais em minutos com nossa calculadora de dieta em Excel. Automatize seus cálculos nutricionais e impressione seus clientes.">
-    <meta name="keywords" content="planilha de dieta, planilha de dieta para nutricionista, planilha de nutricionista, planilha para montar dieta, planilha dieta, calculadora de dieta excel, planilha de dieta excel, planilha de dieta moderna">
-    
-    <!-- Meta tags Open Graph -->
-    <meta property="og:title" content="Planilha de Dieta para Nutricionista | Calculadora Nutrifácil Excel">
-    <meta property="og:description" content="Monte dietas profissionais em minutos com a melhor planilha de dieta para nutricionistas. Calculadora de dieta em Excel moderna e prática.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nutrideividi.com.br/nutrifacil">
-    <meta property="og:image" content="https://nutrideividi.com.br/nutrifacil/preview.jpg">
-    
-    <!-- Meta tags Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Planilha de Dieta para Nutricionista | Calculadora Nutrifácil Excel">
-    <meta name="twitter:description" content="Monte dietas profissionais em minutos com a melhor planilha de dieta para nutricionistas. Calculadora de dieta em Excel moderna e prática.">
-    <meta name="twitter:image" content="https://nutrideividi.com.br/nutrifacil/preview.jpg">
-    
-    <!-- Meta tags adicionais -->
-    <meta name="author" content="NutriDeividi">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="Portuguese">
-    <link rel="canonical" href="https://nutrideividi.com.br/nutrifacil">
-    
-    <!-- Structured Data / Schema.org -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Planilha de Dieta Nutrifácil",
-        "applicationCategory": "Nutrição",
-        "operatingSystem": "Windows",
-        "offers": {
-            "@type": "Offer",
-            "price": "97.00",
-            "priceCurrency": "BRL"
-        },
-        "description": "Planilha de dieta profissional para nutricionistas. Monte dietas completas em minutos usando Excel.",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "156"
-        }
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-secondary: #111111;
+      --surf: #1a1a1a;
+      --surf-hover: #252525;
+      --primary: #047857;
+      --accent: #059669;
+      --accent-bright: #10b981;
+      --text: #ffffff;
+      --text-muted: #a1a1aa;
+      --text-dim: #71717a;
+      --shadow: rgba(0,0,0,0.3);
+      --border: rgba(255,255,255,0.1);
+      --success: #22c55e;
+      --warning: #f59e0b;
     }
-    </script>
+
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
     
-    <meta name="theme-color" content="#141414">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    html { 
+      scroll-behavior: smooth; 
+    }
     
-    <!-- Preload critical assets -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      background: var(--bg); 
+      color: var(--text); 
+      line-height: 1.6; 
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header { 
+      position: sticky; 
+      top: 0; 
+      background: rgba(26, 26, 26, 0.8); 
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100; 
+    }
     
-    <!-- Defer non-critical CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+    nav { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      max-width: 1200px; 
+      margin: auto; 
+      padding: 16px; 
+    }
     
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    nav .logo { 
+      font-size: 1.25rem; 
+      font-weight: 700; 
+      color: var(--accent-bright); 
+      text-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    }
+    
+    nav ul { 
+      display: flex; 
+      gap: 24px; 
+      list-style: none; 
+    }
+    
+    nav ul a { 
+      color: var(--text); 
+      font-weight: 500; 
+      transition: all .3s ease; 
+      text-decoration: none;
+      position: relative;
+    }
+    
+    nav ul a:hover { 
+      color: var(--accent-bright); 
+    }
+
+    nav ul a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    nav ul a:hover::after {
+      width: 100%;
+    }
+    
+    .cta-header { 
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright)); 
+      color: #FFF; 
+      padding: 12px 20px; 
+      border-radius: 8px; 
+      font-weight: 600; 
+      transition: all .3s ease; 
+      text-decoration: none; 
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    
+    .cta-header:hover { 
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    }
+
+    /* Spotlight Hero Section */
+    .hero-spotlight {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    }
+
+    /* Grid Background */
+    .grid-background {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.03)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+      opacity: 0;
+      animation: fadeInGrid 2s ease-out 0.5s forwards;
+    }
+
+    @keyframes fadeInGrid {
+      to { opacity: 1; }
+    }
+
+    /* Spotlight Effect */
+    .spotlight-container {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0;
+      animation: fadeInSpotlight 2s ease-out forwards;
+    }
+
+    @keyframes fadeInSpotlight {
+      to { opacity: 1; }
+    }
+
+    .spotlight-left, .spotlight-right {
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .spotlight-left {
+      left: 0;
+      animation: spotlightMoveLeft 8s ease-in-out infinite;
+    }
+
+    .spotlight-right {
+      right: 0;
+      animation: spotlightMoveRight 8s ease-in-out infinite;
+    }
+
+    @keyframes spotlightMoveLeft {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(60px); }
+    }
+
+    @keyframes spotlightMoveRight {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-60px); }
+    }
+
+    .spotlight-beam {
+      position: absolute;
+      top: 0;
+    }
+
+    .beam-1 {
+      background: radial-gradient(68.54% 68.72% at 55.02% 31.46%, 
+        hsla(158, 92%, 45%, 0.12) 0%, 
+        hsla(158, 92%, 55%, 0.04) 50%, 
+        hsla(158, 92%, 45%, 0) 80%);
+      width: 560px;
+      height: 1380px;
+      transform: translateY(-350px) rotate(-45deg);
+    }
+
+    .beam-2 {
+      background: radial-gradient(50% 50% at 50% 50%, 
+        hsla(158, 92%, 45%, 0.08) 0%, 
+        hsla(158, 92%, 55%, 0.03) 80%, 
+        transparent 100%);
+      width: 240px;
+      height: 1380px;
+      transform: rotate(-45deg) translate(5%, -50%);
+      transform-origin: top left;
+    }
+
+    .beam-3 {
+      background: radial-gradient(50% 50% at 50% 50%, 
+        hsla(158, 92%, 45%, 0.06) 0%, 
+        hsla(158, 92%, 45%, 0.02) 80%, 
+        transparent 100%);
+      width: 240px;
+      height: 1380px;
+      transform: rotate(-45deg) translate(-180%, -70%);
+      transform-origin: top left;
+    }
+
+    .spotlight-right .beam-1 {
+      transform: translateY(-350px) rotate(45deg);
+    }
+
+    .spotlight-right .beam-2 {
+      transform: rotate(45deg) translate(-5%, -50%);
+      transform-origin: top right;
+    }
+
+    .spotlight-right .beam-3 {
+      transform: rotate(45deg) translate(180%, -70%);
+      transform-origin: top right;
+    }
+
+    /* Hero Content */
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--accent-bright);
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 50%, #ffffff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1s ease-out 0.5s both;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 1s ease-out 0.7s both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 1s ease-out 0.9s both;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+      color: white;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-3px);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .floating-elements {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .floating-element {
+      position: absolute;
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+      border-radius: 50%;
+      opacity: 0.1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-element:nth-child(1) {
+      width: 60px;
+      height: 60px;
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .floating-element:nth-child(2) {
+      width: 40px;
+      height: 40px;
+      top: 60%;
+      right: 15%;
+      animation-delay: 2s;
+    }
+
+    .floating-element:nth-child(3) {
+      width: 80px;
+      height: 80px;
+      bottom: 20%;
+      left: 20%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    /* Section Styling */
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    .section-dark {
+      background: var(--bg-secondary);
+      margin: 0;
+      max-width: none;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-dark .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    /* Features Section */
+    .features {
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--accent-bright), var(--accent));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .features-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 50px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .features-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-top: 50px;
+    }
+
+    .feature-card {
+      background: var(--surf);
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .feature-card svg {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 24px;
+      color: var(--accent-bright);
+      filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.3));
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* Demo Section */
+    .demo-section {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .demo-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .demo-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    .demo-container {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      border: 1px solid var(--border);
+    }
+
+    .demo-container iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: none;
+    }
+
+    /* Pricing Section */
+    .pricing {
+      text-align: center;
+    }
+
+    .pricing h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--accent-bright), var(--accent));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .pricing-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 50px;
+    }
+
+    .pricing-card {
+      background: var(--surf);
+      border: 2px solid var(--accent-bright);
+      border-radius: 20px;
+      padding: 50px 40px;
+      max-width: 500px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(16, 185, 129, 0.1);
+    }
+
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+    }
+
+    .pricing-badge {
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+      color: white;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      display: inline-block;
+    }
+
+    .price-container {
+      margin: 30px 0 40px;
+    }
+
+    .old-price {
+      font-size: 1.5rem;
+      color: var(--text-dim);
+      text-decoration: line-through;
+      margin-right: 10px;
+    }
+
+    .current-price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--accent-bright);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .installments {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      background: #0a0a0a;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .testimonials h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 50px;
+      color: white;
+    }
+
+    .testimonial-carousel {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .testimonial-track {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    .testimonial-slide {
+      min-width: 100%;
+      padding: 40px 30px;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .testimonial-text {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* FAQ Section */
+    .faq h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 50px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--accent-bright), var(--accent));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .faq-item {
+      background: var(--surf);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: var(--accent-bright);
+    }
+
+    .faq-item details {
+      padding: 0;
+    }
+
+    .faq-item summary {
+      padding: 24px 30px;
+      font-weight: 600;
+      font-size: 1.125rem;
+      cursor: pointer;
+      color: var(--text);
+      list-style: none;
+      position: relative;
+      transition: background 0.3s ease;
+    }
+
+    .faq-item summary:hover {
+      background: var(--surf-hover);
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      color: var(--accent-bright);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item details[open] summary::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 30px 24px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 60px 20px 40px;
+      color: var(--text-muted);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-bright);
+      margin-bottom: 20px;
+    }
+
+    .footer-text {
+      font-size: 0.875rem;
+      margin-bottom: 30px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: var(--surf);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      background: var(--accent-bright);
+      border-color: var(--accent-bright);
+      transform: translateY(-3px);
+    }
+
+    .social-link img {
+      width: 24px;
+      height: 24px;
+      filter: invert(1);
+    }
+
+    .social-link:hover img {
+      filter: invert(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+      }
+      
+      nav ul {
+        gap: 16px;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 16px;
+        flex-wrap: wrap;
+      }
+      
+      nav ul li {
+        font-size: 0.9rem;
+      }
+      
+      .hero-content {
+        padding: 60px 16px;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+
+      section {
+        padding: 60px 16px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .feature-card {
+        padding: 30px 20px;
+      }
+
+      .pricing-card {
+        padding: 40px 30px;
+        margin: 0 16px;
+      }
+
+      .testimonial-slide {
+        padding: 30px 20px;
+      }
+
+      .social-links {
+        gap: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div id="root">
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">
-                <h1>Nutrifácil</h1>
-            </div>
-            <button class="menu-toggle" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#beneficios"><i class="fas fa-rocket"></i> Benefícios</a></li>
-                <li><a href="#demo"><i class="fas fa-laptop"></i> Demonstração</a></li>
-                <li><a href="#depoimentos"><i class="fas fa-comments"></i> Depoimentos</a></li>
-                <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                <li><a href="#preco" class="cta-button"><i class="fas fa-shopping-cart"></i> Comprar Agora</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="logo">NutriFácil</div>
+      <ul>
+        <li><a href="#features">Recursos</a></li>
+        <li><a href="#demo">Demonstração</a></li>
+        <li><a href="#pricing">Preço</a></li>
+        <li><a href="#testimonials">Depoimentos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="https://pay.hotmart.com/J97881936U?off=1ubj3v3r&checkoutMode=10" target="_blank"class="cta-header" onclick="dataLayer.push({'event':'fb_initiate_checkout'});">Comprar Agora</a>
+    </nav>
+  </header>
 
-    <main>
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Planilha de Dieta para Nutricionista | Calculadora Nutrifácil Excel</h1>
-                <p class="hero-subtitle">A melhor planilha de dieta moderna para nutricionistas que desejam montar planos alimentares profissionais em minutos. Nossa calculadora de dieta em Excel automatiza todo o processo.</p>
-                <div class="cta-group">
-                    <a href="#preco" class="primary-button">Começar Agora</a>
-                    <a href="#demo" class="secondary-button">Ver Demonstração</a>
-                </div>
-            </div>
-        </section>
-
-    <section id="demo" class="demo">
-        <div class="container">
-            <h2>Veja em Ação</h2>
-            <div class="demo-wrapper">
-                <div class="laptop-mockup">
-                    <div class="laptop-frame">
-                        <div class="laptop-screen">
-                            <div class="video-wrapper">
-                                <iframe
-                                    src="https://www.youtube.com/embed/wjj4oqXbefg?autoplay=0&rel=0&showinfo=0&modestbranding=1"
-                                    title="Demonstração Nutrifácil"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen>
-                                </iframe>
-                            </div>
-                        </div>
-                        <div class="laptop-base">
-                            <div class="laptop-trackpad"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="demo-content">
-                    <h3>Simples e Intuitivo</h3>
-                    <ul class="demo-features">
-                        <li><i class="fas fa-check"></i> Monte dietas em poucos cliques</li>
-                        <li><i class="fas fa-check"></i> Cálculos automáticos de nutrientes</li>
-                        <li><i class="fas fa-check"></i> Layout profissional e personalizado</li>
-                        <li><i class="fas fa-check"></i> Economize horas de trabalho</li>
-                    </ul>
-                </div>
-            </div>
+  <main>
+    <!-- Hero Section with Spotlight -->
+    <section class="hero-spotlight">
+      <!-- Grid Background -->
+      <div class="grid-background"></div>
+      
+      <!-- Spotlight Effect -->
+      <div class="spotlight-container">
+        <div class="spotlight-left">
+          <div class="spotlight-beam beam-1"></div>
+          <div class="spotlight-beam beam-2"></div>
+          <div class="spotlight-beam beam-3"></div>
         </div>
-    </section>        <section id="beneficios" class="benefits">
-            <div class="container">
-                <h2>O que você ganha</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">⚡</div>
-                        <h3>Agilidade</h3>
-                        <p>Monte dietas completas em menos de 5 minutos, ganhe tempo e foque no atendimento.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">🤖</div>
-                        <h3>Automação</h3>
-                        <p>Precisão nos cálculos, apenas escolha o alimento e digite a quantidade sem um clique extra.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">✨</div>
-                        <h3>Profissionalismo</h3>
-                        <p>Layout limpo para impressionar seu cliente, impressão do cardápio em apenas 2 cliques.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="preco" class="pricing">
-            <div class="container">
-                <h2>Oferta Especial</h2>
-                <div class="pricing-card">
-                    <div class="price">
-                        <span class="original-price">R$139,90</span>
-                        <span class="current-price">R$97</span>
-                        <span class="price-detail">à vista ou 12x de R$10,63</span>
-                    </div>
-                    <a href="https://pay.hotmart.com/J97881936U?off=1ubj3v3r&checkoutMode=10" class="primary-button">Comprar Agora</a>
-                    <p class="guarantee">7 dias de garantia incondicional</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="depoimentos" class="testimonials">
-            <div class="container">
-                <h2>O que dizem sobre a Nutrifácil</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <p>"Comecei a montar o plano de um paciente usando a Nutrifácil e já senti a diferença. Simples, prática e entrega exatamente o que eu preciso. Tô usando direto aqui na clínica."</p>
-                        <cite>— João Carlos Nutri</cite>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Parabéns pelo sistema! Eu tava usando planilha manual até semana passada, agora com a Nutrifácil consigo montar a dieta em 5 min, salvar histórico e ainda imprimir tudo bonitinho."</p>
-                        <cite>— Ana Júlia</cite>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Excelente ferramenta! Sou nutricionista há 10 anos e confesso que facilitou muito minha rotina com as dietas. Automatizou tudo que eu fazia manual. Super recomendo."</p>
-                        <cite>— Nutri Anderson</cite>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="faq">
-            <div class="container">
-                <h2>Perguntas Frequentes</h2>
-                <div class="faq-grid">
-                    <details>
-                        <summary>Qual versão do Excel é compatível?</summary>
-                        <p>A Nutrifácil é compatível com as versões mais recentes do Microsoft Excel.</p>
-                    </details>
-                    <details>
-                        <summary>Preciso ser expert em Excel?</summary>
-                        <p>Não! A Nutrifácil foi desenvolvida para ser intuitiva e fácil de usar, mesmo para quem não tem experiência com Excel.</p>
-                    </details>
-                    <details>
-                        <summary>Preciso pagar mensalidades para usar?</summary>
-                        <p>Não, é um pagamento único que te dá acesso vitalício à ferramenta.</p>
-                    </details>
-                    <details>
-                        <summary>Como funciona a garantia?</summary>
-                        <p>Oferecemos 7 dias de garantia incondicional. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.</p>
-                    </details>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p>&copy; 2025 NutriDeividi. Todos os direitos reservados.</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://instagram.com/nutrideividisf" target="_blank" rel="noopener">Instagram</a>
-                    <a href="https://wa.me/5517991095961?text=Tenho%20d%C3%BAvidas%20sobre%20a%20calculadora%20de%20dietas%2C%20pode%20me%20falar%20mais%3F" target="_blank" rel="noopener">WhatsApp</a>
-                </div>
-            </div>
+        <div class="spotlight-right">
+          <div class="spotlight-beam beam-1"></div>
+          <div class="spotlight-beam beam-2"></div>
+          <div class="spotlight-beam beam-3"></div>
         </div>
-    </footer>
+      </div>
 
-    <script src="assets/js/main.js"></script>
+      <!-- Floating Elements -->
+      <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          Ferramenta profissional para nutricionistas e treinadores
+        </div>
+        
+        <h1 class="hero-title">
+          Monte Dietas<br>Profissionais<br>em 5 minutos
+        </h1>
+        
+        <p class="hero-subtitle">
+          NutriFácil é a ferramenta definitiva para Nutricionistas, treinadores e estudantes que desejam agilidade e precisão na montagem de dietas.
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="#demo" class="btn-primary">Ver Demonstração</a>
+          <a href="#features" class="btn-secondary">Conhecer Recursos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <h2>O que você ganha</h2>
+      <p class="features-subtitle">
+        Descubra como a NutriFácil vai transformar sua rotina profissional
+      </p>
+      
+      <div class="features-grid">
+        <article class="feature-card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <h3>Agilidade</h3>
+          <p>Monte dietas completas em menos de 5 minutos, ganhe tempo e foque no atendimento ao seu paciente.</p>
+        </article>
+        
+        <article class="feature-card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <h3>Automação</h3>
+          <p>Precisão nos cálculos, apenas escolha o alimento e digite a quantidade sem um clique extra.</p>
+        </article>
+        
+        <article class="feature-card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          <h3>Profissionalismo</h3>
+          <p>Layout limpo para impressionar seu cliente, impressão do cardápio em apenas 2 cliques.</p>
+        </article>
+      </div>
+
+      <!-- Demo Section -->
+      <div id="demo" class="demo-section">
+        <h2 class="demo-title">Veja como funciona</h2>
+        <p class="demo-subtitle">
+          Assista à demonstração completa e descubra como montar dietas profissionais rapidamente
+        </p>
+        <div class="demo-container">
+          <iframe src="https://www.youtube.com/embed/wjj4oqXbefg" title="Demonstração NutriFácil" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <div class="section-dark">
+      <div class="container">
+        <section id="pricing" class="pricing">
+          <h2>Oferta Especial</h2>
+          <p class="pricing-subtitle">
+            Invista no seu futuro profissional com condições especiais
+          </p>
+          
+          <div class="pricing-card">
+            <div class="pricing-badge">Oferta Limitada</div>
+            
+            <div class="price-container">
+              <span class="old-price">R$ 139,90</span>
+              <span class="current-price">R$ 97</span>
+              <div class="installments">ou 12x de R$ 10,63</div>
+            </div>
+            
+            <a href="https://pay.hotmart.com/J97881936U?off=1ubj3v3r&checkoutMode=10" target="_blank" class="btn-primary" onclick="dataLayer.push({'event':'fb_initiate_checkout'});">
+              Comprar agora
+            </a>
+          </div>
+        </section>
+      </div>
     </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <h2>O que dizem sobre a NutriFácil</h2>
+      
+      <div class="testimonial-carousel">
+        <div class="testimonial-track" id="testimonial-track">
+          <div class="testimonial-slide">
+            <p class="testimonial-text">
+              "Comecei a montar o plano de um paciente usando a NutriFácil e já senti a diferença. Simples, prática e entrega exatamente o que eu preciso. Tô usando direto aqui na clínica."
+            </p>
+            <p class="testimonial-author">— João Carlos Nutri</p>
+          </div>
+          
+          <div class="testimonial-slide">
+            <p class="testimonial-text">
+              "Parabéns pelo sistema! Eu tava usando planilha manual até semana passada, agora com a NutriFácil consigo montar a dieta em 5 min, salvar histórico e ainda imprimir tudo bonitinho."
+            </p>
+            <p class="testimonial-author">— Ana Júlia</p>
+          </div>
+          
+          <div class="testimonial-slide">
+            <p class="testimonial-text">
+              "Velho… que planilha boa na moral! Já montei a dieta de uns 4 pacientes essa semana e nem gastei 20min. Tô entendendo o pq do nome NutriFácil kkkkkkk"
+            </p>
+            <p class="testimonial-author">— Juninho</p>
+          </div>
+          
+          <div class="testimonial-slide">
+            <p class="testimonial-text">
+              "Excelente ferramenta! Sou nutricionista há 10 anos e confesso que facilitou muito minha rotina com as dietas. Automatizou tudo que eu fazia manual. Super recomendo."
+            </p>
+            <p class="testimonial-author">— Nutri Anderson</p>
+          </div>
+          
+          <div class="testimonial-slide">
+            <p class="testimonial-text">
+              "Irmão, só agradecer. Comecei a usar NutriFácil e montei a primeira dieta do meu atleta em tempo recorde. Layout limpo, cálculo automático e histórico salvo. Top demais."
+            </p>
+            <p class="testimonial-author">— Paulo</p>
+          </div>
+          
+          <div class="testimonial-slide">
+            <p class="testimonial-text">
+              "Tô testando várias ferramentas e a NutriFácil foi a única que entregou o que promete. Rápida, organizada e com função de substituição automática. Salvou meus atendimentos."
+            </p>
+            <p class="testimonial-author">— Valéria</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+      <h2>Perguntas Frequentes</h2>
+      
+      <div class="faq-item">
+        <details>
+          <summary>Qual versão do Excel é compatível?</summary>
+          <div class="faq-answer">
+            <p>Recomendado Excel 2021+, com suporte a versões anteriores. A NutriFácil funciona perfeitamente nas versões mais recentes do Microsoft Excel.</p>
+          </div>
+        </details>
+      </div>
+      
+      <div class="faq-item">
+        <details>
+          <summary>Preciso ser expert em Excel?</summary>
+          <div class="faq-answer">
+            <p>Não. A interface é intuitiva e totalmente automática. Você só precisa saber o básico do Excel para aproveitar todos os recursos da NutriFácil.</p>
+          </div>
+        </details>
+      </div>
+      
+      <div class="faq-item">
+        <details>
+          <summary>Preciso pagar mensalidades para usar?</summary>
+          <div class="faq-answer">
+            <p>Não, a licença de uso é vitalícia. Você paga apenas uma vez e pode usar para sempre, sem taxas mensais ou anuais.</p>
+          </div>
+        </details>
+      </div>
+      
+      <div class="faq-item">
+        <details>
+          <summary>Como funciona a garantia?</summary>
+          <div class="faq-answer">
+            <p>Oferecemos 7 dias de teste com reembolso garantido. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">NutriFácil</div>
+      <p class="footer-text">© 2025 NutriDeividi. Todos os direitos reservados.</p>
+      
+      <div class="social-links">
+        <a href="https://instagram.com/nutrideividisf" class="social-link" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://wa.me/5517991095961?text=Tenho%20d%C3%BAvidas%20sobre%20a%20calculadora%20de%20dietas%2C%20pode%20me%20falar%20mais%3F" class="social-link" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/whatsapp.svg" alt="WhatsApp">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "NutriFácil",
+    "image": [
+      "https://imgur.com/jN9y1W0"
+    ],
+    "description": "Planilha profissional para montar dietas completas em minutos, com praticidade e eficiência.",
+    "sku": "planilha-nutrifacil-001",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://nutrideividi.com.br/nutrifacil",
+      "priceCurrency": "BRL",
+      "price": "139.90",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "162"
+    }
+  }
+  </script>
+
+  <script>
+    // Testimonial Carousel
+    const track = document.getElementById('testimonial-track');
+    const slides = track.children;
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+
+    function moveToNextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      const translateX = -currentIndex * 100;
+      track.style.transform = `translateX(${translateX}%)`;
+    }
+
+    // Auto-play testimonials
+    setInterval(moveToNextSlide, 4000);
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll effect to header
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(26, 26, 26, 0.95)';
+      } else {
+        header.style.background = 'rgba(26, 26, 26, 0.8)';
+      }
+    });
+  </script>
 </body>
 </html>
-
-
-
-
